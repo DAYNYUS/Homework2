@@ -1,17 +1,18 @@
-﻿//не ДЗ Напишите программу, которая выводит случайное трехзначное число и удаляет вторую цифру числа (456->46, 782->72, 98->8)
+//ДЗ2 Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет(645->5, 78->третьей цифры нет, 32679->6)
 
+Console.Write("Введите любое число: ");
+string input = Console.ReadLine();
+int number = Convert.ToInt32(input);
 
-int Number = new Random().Next(99, 1000);
-int Max = 0;
-
-int NumberA = Number / 10;
-int NumberB = Number % 10;
-
-if (NumberA > NumberB) Max = NumberA;
-else Max = NumberB;
-
-Console.Write("Наибольшая цифра числа ");
-Console.Write(Number);
-Console.Write(" является ");
-Console.Write(Max);
-
+if (number < 1000)
+{
+  if (number / 100 > 0) Console.WriteLine($"Третья цифра этого числа {number % 10}");
+    
+  else Console.WriteLine("Третьей цифры нет");
+}
+else while (number > 1000) number = number / 10;
+{
+  if (number / 100 > 0) Console.WriteLine($"Третья цифра этого числа {number % 10}");
+    
+  else Console.WriteLine("Третьей цифры нет");
+}
