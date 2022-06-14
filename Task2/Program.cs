@@ -4,13 +4,7 @@ Console.Write("Введите любое число: ");
 string input = Console.ReadLine();
 int number = Convert.ToInt32(input);
 
-if (number < 1000)
-{
-  if (number / 100 > 0) Console.WriteLine($"Третья цифра этого числа {number % 10}");
-    
-  else Console.WriteLine("Третьей цифры нет");
-}
-else while (number > 1000) number = number / 10;
+while (number > 1000) number = number / 10;
 {
   if (number / 100 > 0) Console.WriteLine($"Третья цифра этого числа {number % 10}");
     
