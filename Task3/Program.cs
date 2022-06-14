@@ -1,19 +1,57 @@
-﻿//ДЗ2 Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет(645->5, 78->третьей цифры нет, 32679->6)
-//1
-//int Number = new Random().Next(1, 1500);
-//System.Console.WriteLine();
-//System.Console.WriteLine($"Дано число: {Number}");
+//ДЗ 3 Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным (6->да, 7->да, 1->нет)
 
-//if (Number / 100 > 0) System.Console.WriteLine($"Третьей цифрой числа {Number} является цифра {Number / 100 % 10}");
-//else System.Console.WriteLine($"У числа {Number} нет третьей цифры");
+string day1 = "Понедельник";
+string day2 = "Вторник";
+string day3 = "Среда";
+string day4 = "Четверг";
+string day5 = "Пятница";
+string day6 = "Суббота";
+string day7 = "Воскресенье";
 
-//System.Console.WriteLine();
 
-//2
-//Console.Write("Введите число: ");
-//string input = Console.ReadLine();
-//int number = Convert.ToInt32(input);
+Console.WriteLine("Введите число от 1 до 7:");
 
-//int a = number % 10;
+string input = Console.ReadLine();
+int number = Convert.ToInt32(input);
 
-//Console.WriteLine("Последняя цифра этого числа: " + a);
+if (number == 1)
+{
+  Console.WriteLine(day1 + " нет");
+}
+else 
+    if (number == 2)
+    {
+        Console.WriteLine(day2 + " нет");
+    }
+    else 
+     if (number == 3)
+        {
+        Console.WriteLine(day3 + " нет");
+        }
+     else 
+        if (number == 4)
+        {
+        Console.WriteLine(day4 + " нет");
+        } 
+         else 
+            if (number == 5)
+                {
+                 Console.WriteLine(day5 + " нет");
+                } 
+            else 
+
+                if (number == 6)
+                {
+                 Console.WriteLine(day6 + " да");
+                } 
+
+                else 
+                
+                if (number == 7)
+                {
+                 Console.WriteLine(day7 + " да");
+                } 
+
+                else {
+                 Console.WriteLine("ОШИБКА! Введите число в заданном диапазоне от 1 до 7");
+                    } 
